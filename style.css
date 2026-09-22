@@ -1,11 +1,354 @@
-body{
-    background-color: rgb(22, 20, 20);
+/* =========================
+   RÉINITIALISATION
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#nom{
-    text-align: center;
-    color: rgb(110, 110, 222);
+
+html {
+    scroll-behavior: smooth;
 }
-#metier{
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #111827;
+    color: white;
     text-align: center;
-    color: rgb(163, 163, 234);
+    padding: 35px 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.metier {
+    color: #9ca3af;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   BOUTON THÈME
+========================= */
+
+#themeButton {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #38bdf8;
+    color: #111827;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    padding: 80px 30px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.petit-titre {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.bouton {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.bouton:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   COMPÉTENCES
+========================= */
+
+.competences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.competence {
+    background: #111827;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+}
+
+
+/* =========================
+   PROJETS
+========================= */
+
+.projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projet {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.projet h3 {
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.projet p {
+    margin-bottom: 12px;
+}
+
+.projet a {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.projet a:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   PARCOURS
+========================= */
+
+.parcours {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #2563eb;
+}
+
+.parcours h3 {
+    color: #2563eb;
+    font-size: 24px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    background: white;
+}
+
+#contact p {
+    margin-bottom: 12px;
+}
+
+#contact a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =========================
+   MODE SOMBRE
+========================= */
+
+body.dark {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark section h2 {
+    color: white;
+}
+
+body.dark .projet,
+body.dark #contact,
+body.dark .parcours {
+    background: #1e293b;
+}
+
+body.dark .projet h3,
+body.dark .parcours h3 {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .projets {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+}
+/* =========================
+   PHOTO DE PROFIL
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-photo {
+    flex: 0 0 300px;
+}
+
+.hero-photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #2563eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   PHOTO SUR MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-photo {
+        flex: none;
+    }
+
+    .hero-photo img {
+        width: 220px;
+        height: 220px;
+    }
+
 }
