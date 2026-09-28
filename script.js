@@ -34,3 +34,37 @@ photo.addEventListener("mouseleave", function () {
     photo.src = "photo_profile_portfolio.png";
 
 });
+
+// =========================
+// ANIMATION AU SCROLL
+// =========================
+
+const elements = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right"
+);
+
+const observer = new IntersectionObserver(
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+elements.forEach(function (element) {
+
+    observer.observe(element);
+
+});
