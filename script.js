@@ -25,7 +25,7 @@ const photo = document.getElementById("photoProfil");
 
 photo.addEventListener("mouseenter", function () {
 
-    photo.src = "photo_profile_portfolio_2.png";
+    photo.src = "monLogo.png";
 
 });
 
